@@ -1,16 +1,61 @@
-# React + Vite
+# AMETHRA - Quiz de Geociências 💎
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Um Web App interativo desenvolvido em React para testar conhecimentos nas áreas de Cristalografia, Mineralogia e Gemologia. O projeto apresenta um quiz dinâmico com 30 questões, suporte a renderização de imagens e ilustrações técnicas, e uma interface responsiva baseada em gamificação.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* **Quiz Dinâmico:** Banco de 30 perguntas com múltipla escolha e validação em tempo real.
+* **Suporte a Mídia:** Renderização de imagens únicas e múltiplas (lado a lado) diretamente nos cards de perguntas.
+* **Feedback Visual:** Indicadores de acerto/erro instantâneos utilizando estilização condicional.
+* **Sistema de Pontuação:** Cálculo de resultados ao final da partida.
+* **Design Responsivo:** Layout adaptável mantendo a proporção ideal tanto em telas Desktop quanto Mobile.
+* **Animações CSS:** Botões interativos com pseudo-elementos e efeitos de transição inspirados no Uiverse.
 
-## React Compiler
+## 🛠️ Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **React (Vite):** Biblioteca principal para construção da interface e gerenciamento de estado (`useState`).
+* **React Router Dom:** Gerenciamento de rotas (Navegação entre Home, Regras, Login e Jogo).
+* **CSS3:** Estilização utilizando Flexbox, gradientes lineares, variáveis e Media Queries.
+* **JavaScript (ES6+):** Lógica do banco de perguntas e manipulação de arrays.
 
-## Expanding the Oxlint configuration
+## 📂 Estrutura do Projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```text
+src/
+ ├── assets/
+ │   └── images/          # Imagens das questões (Cristalografia, Huygens, etc.)
+ ├── pages/
+ │   ├── Home.jsx         # Página inicial
+ │   ├── Jogar.jsx        # Lógica principal do Quiz e renderização do banco de dados
+ │   └── Regras.jsx       # Informações do jogo
+ ├── styles/
+ │   ├── inicial.css      # Estilos da Home
+ │   └── jogar.css        # Estilos específicos do painel do jogo
+ ├── App.jsx              # Configuração das rotas
+ └── main.jsx             # Ponto de entrada da aplicação
+
+⚙️ Como executar o projeto localmente
+Faça o clone deste repositório:
+
+Bash
+git clone [https://github.com/SEU_USUARIO/amethra-quiz.git](https://github.com/SEU_USUARIO/amethra-quiz.git)
+Acesse a pasta do projeto:
+
+Bash
+cd amethra-quiz
+Instale as dependências:
+
+Bash
+npm install
+Inicie o servidor de desenvolvimento:
+
+Bash
+npm run dev
+Acesse http://localhost:5173 no seu navegador.
+
+🌐 Deploy
+O projeto está configurado para deploy automático em plataformas como Netlify e Vercel.
+
+Lembre-se de adicionar o arquivo _redirects na pasta public/ contendo /* /index.html 200 para garantir o funcionamento correto das rotas do React Router em produção.
+
+Desenvolvido por Cayo Gonçalves Garcia
