@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap');
+
+.jogar-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    #d0b8ff 0%,
+    #b089ff 45%,
+    #9a6cff 75%,
+    #8757f5 100%
+  );
+  font-family: 'Outfit', sans-serif;
+}
+
+.jogar-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.jogar-card {
+  width: 100%;
+  max-width: 750px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.jogar-inicio h1,
+.jogar-fim h1 {
+  color: #5b2c83;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.jogar-inicio p,
+.jogar-fim p {
+  color: #333333;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.progresso {
+  font-size: 13px;
+  font-weight: 600;
+  color: #7c3aed;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.jogar-pergunta-box h2 {
+  color: #3f186c;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 15px 0 20px 0;
+}
+
+/* Containers e Estilos para as Imagens das Questões */
+.imagem-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 20px 0;
+  width: 100%;
+}
+
+.imagem-container-duplo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0 20px 0;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.pergunta-imagem {
+  max-width: 100%;
+  max-height: 220px;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.imagem-container-duplo .pergunta-imagem {
+  max-width: 48%;
+  max-height: 200px;
+}
+
+.opcoes-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.opcao-btn {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #e2d8f7;
+  border-radius: 10px;
+  background: #fcfaff;
+  color: #333333;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  font-family: 'Outfit', sans-serif;
+}
+
+.opcao-btn:hover:not(:disabled) {
+  border-color: #9a6cff;
+  background: #f3ecff;
+}
+
+.opcao-btn.selecionada {
+  border-color: #7c3aed;
+  background: #eadaff;
+  color: #4b1f70;
+}
+
+.opcao-btn.correta {
+  border-color: #2e7d32 !important;
+  background-color: #e8f5e9 !important;
+  color: #1b5e20 !important;
+}
+
+.opcao-btn.incorreta {
+  border-color: #c62828 !important;
+  background-color: #ffebee !important;
+  color: #b71c1c !important;
+}
+
+/* Feedback de resposta */
+.feedback-box {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.feedback-box.sucesso {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.feedback-box.erro {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+/* Botões com efeito Uiverse */
+.botao-padrao {
+  display: inline-block;
+  padding: 10px 28px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #4f4f4f;
+  border-radius: 50px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  z-index: 1;
+  font-family: 'Outfit', sans-serif;
+}
+
+.botao-padrao:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.botao-padrao:hover:not(:disabled) {
+  border-color: #7014ad;
+  color: #ffffff;
+  background-color: #7014ad;
+}
+
+.jogar-footer {
+  width: 100%;
+  padding: 25px;
+  background: linear-gradient(135deg, #4b1f70, #5b2c83);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .jogar-card {
+    padding: 25px 20px;
+  }
+
+  .jogar-inicio h1,
+  .jogar-fim h1 {
+    font-size: 24px;
+  }
+
+  .jogar-pergunta-box h2 {
+    font-size: 17px;
+  }
+
+  .opcao-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .pergunta-imagem {
+    max-height: 180px;
+  }
+
+  .imagem-container-duplo .pergunta-imagem {
+    max-width: 100%;
+  }
+}

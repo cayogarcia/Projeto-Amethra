@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Outfit:wght@300;400;600;800&display=swap');
+
+/* Reset e Estrutura Principal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.regras-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    #d0b8ff 0%,
+    #b089ff 45%,
+    #9a6cff 75%,
+    #8757f5 100%
+  );
+  font-family: "Outfit", sans-serif;
+}
+
+/* Header */
+.regras-header {
+  width: 100%;
+  padding: 20px 40px;
+  background: linear-gradient(135deg, #4b1f70, #7c3aed);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.regras-header h1 {
+  color: #ffffff;
+  font-family: 'Nerko One', cursive;
+  font-size: 45px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Conteúdo Principal */
+.regras-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+/* Card Retangular de Texto */
+.caixa-de-texto {
+  width: 100%;
+  max-width: 680px;
+  background: white;
+  padding: 35px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.caixa-de-texto:hover {
+  transform: translateY(-3px);
+}
+
+/* Título Principal */
+.caixa-de-texto h1 {
+  font-size: 22px !important;
+  color: #3f186c;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* Subtítulo Inicial (Topo) */
+.subtitulo-intro {
+  font-size: 14.5px !important; /* Levemente maior que o corpo do texto (13.5px) */
+  color: #5b2c83;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+/* Subtítulo Final (Para os Professores) */
+.subtitulo-professores {
+  font-size: 14px !important; /* Tamanho proporcional para o bloco final */
+  color: #5b2c83;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+/* Parágrafos das regras */
+.caixa-de-texto p {
+  font-size: 13.5px !important;
+  line-height: 1.5;
+  color: #222222;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+/* Footer */
+.regras-footer {
+  width: 100%;
+  padding: 25px;
+  background: linear-gradient(135deg, #4b1f70, #5b2c83);
+  text-align: center;
+}
+
+/* Botão Voltar */
+.botao-voltar {
+  display: inline-block;
+  padding: 10px 24px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #4f4f4f;
+  border-radius: 50px;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  z-index: 1;
+}
+
+.botao-voltar::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.botao-voltar::after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  background-color: #7014ad;
+  border-radius: 50%;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.botao-voltar:hover {
+  border-color: #7014ad;
+  color: white;
+}
+
+.botao-voltar:hover::before,
+.botao-voltar:hover::after {
+  top: -45%;
+  background-color: #7014ad;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .regras-header h1 {
+    font-size: 1.6rem !important;
+  }
+
+  .caixa-de-texto {
+    padding: 25px 20px;
+  }
+
+  .caixa-de-texto h1 {
+    font-size: 18px !important;
+  }
+
+  .subtitulo-intro,
+  .subtitulo-professores {
+    font-size: 13px !important;
+  }
+
+  .caixa-de-texto p {
+    font-size: 12.5px !important;
+  }
+}

@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Outfit:wght@300;400;600;800&display=swap');
+
+/* Reset e Estrutura Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(
+    135deg,
+    #d0b8ff 0%,
+    #b089ff 45%,
+    #9a6cff 75%,
+    #8757f5 100%
+  );
+  min-height: 100vh;
+  min-width: 1024px; /* Garante que a estrutura nunca encolha menos que a tela de um monitor */
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza todo o bloco na tela */
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Header Principal */
+.navbar {
+  background: linear-gradient(135deg, #4b1f70, #7c3aed);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  width: 100%;
+}
+
+.logo {
+  color: #ffffff;
+  font-family: 'Nerko One', cursive;
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+/* Barra de Navegação */
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-nav {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 22px;
+  border: 1px solid #4f4f4f;
+  border-radius: 4px; /* Altere para 0px para cantos 100% retos, ou mantenha 4px para um leve acabamento */
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.2s ease-in;
+}
+
+.btn-nav:hover {
+  color: #ffffff;
+  border: 1px solid #7014ad;
+}
+
+.btn-nav::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.btn-nav::after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #7014ad;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.btn-nav:hover::before,
+.btn-nav:hover::after {
+  top: -45%;
+  background-color: #7014ad;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+/* Conteúdo Central */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.mascote {
+  width: 220px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* Card Retangular Branco Centralizado */
+.card-welcome {
+  background: #ffffff;
+  width: 100%;
+  max-width: 680px;
+  padding: 35px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card-welcome:hover {
+  transform: translateY(-3px);
+}
+
+.card-welcome h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #3f186c;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-welcome p {
+  font-family: 'Outfit', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #222222;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Rodapé */
+.footer {
+  background: linear-gradient(135deg, #4b1f70, #5b2c83);
+  color: white;
+  text-align: center;
+  padding: 30px;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.footer p {
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-social {
+  display: inline-block;
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-family: 'Outfit', sans-serif;
+  transition: 0.3s;
+}
+
+.btn-social:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(109, 40, 217, 0.4);
+}
