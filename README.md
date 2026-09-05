@@ -38,11 +38,11 @@ src/
 Faça o clone deste repositório:
 
 Bash
-git clone [https://github.com/SEU_USUARIO/amethra-quiz.git](https://github.com/SEU_USUARIO/amethra-quiz.git)
+git clone [https://github.com/cayogarcia/Projeto-Amethra.git](https://github.com/cayogarcia/Projeto-Amethra.git)
 Acesse a pasta do projeto:
 
 Bash
-cd amethra-quiz
+cd Projeto-Amethra
 Instale as dependências:
 
 Bash
