@@ -8,6 +8,9 @@ import imgQuestao6 from '../assets/Questao6.jpg';
 import imgQuestao7 from '../assets/Questao7.png';
 import imgQuestao10A from '../assets/Questao10a.png';
 import imgQuestao10B from '../assets/Questao10b.png';
+import imgJustificativa2 from '../assets/Justificativa2.jpeg';
+import imgJustificativa5 from '../assets/Justificativa5.jpeg';
+import imgJustificativa7 from '../assets/Justificativa7.jpeg';
 
 // Banco de dados com imagens associadas e justificativas
 const BANCO_DE_PERGUNTAS = [
@@ -23,14 +26,15 @@ const BANCO_DE_PERGUNTAS = [
       "É um átomo"
     ],
     respostaCorreta: 2,
-    justificativa: "A cela unitária é a menor porção do retículo cristalino que, quando repetida periodicamente nas três dimensões, reproduz toda a estrutura cristalina. Ela não é um átomo nem o retículo inteiro."
+    justificativa: "A cela unitária é a menor porção do retículo cristalino que, quando repetida periodicamente nas três dimensões, reproduz toda a estrutura cristalina. Ela não é um átomo nem o retículo inteiro. Por isso, a alternativa C é a correta."
   },
   {
     id: 2,
     pergunta: "Quantos sistemas cristalinos temos?",
     opcoes: ["5", "8", "9", "7"],
     respostaCorreta: 3,
-    justificativa: "Existem sete sistemas cristalinos: cúbico, tetragonal, ortorrômbico, monoclínico, triclínico, hexagonal e trigonal. Eles são definidos pelas relações entre os eixos cristalográficos e seus ângulos."
+    justificativa: "Existem sete sistemas cristalinos: cúbico, tetragonal, ortorrômbico, monoclínico, triclínico, hexagonal e trigonal. Eles são definidos pelas relações entre os eixos cristalográficos e seus ângulos. Em algumas bibliografias mais antigas consideravam 6 sistemas cristalinos, incorporaram trigonais (romboédrico) dentro dos hexagonais, mas eles possuem simetria rotacional diferente (ordem 3 nos trigonais e ordem 6 no hexagonal).",
+    justificativaImagem: imgJustificativa2
   },
   {
     id: 3,
@@ -43,7 +47,7 @@ const BANCO_DE_PERGUNTAS = [
       "Cúbico, tetragonal e ortorrômbico"
     ],
     respostaCorreta: 3,
-    justificativa: "No sistema cúbico, os três eixos têm o mesmo comprimento e são perpendiculares (a = b = c); no tetragonal, dois são iguais (a = b ≠ c); no ortorrômbico, os três eixos têm comprimentos diferentes (a ≠ b ≠ c), mantendo ângulos de 90°."
+    justificativa: "A questão exige reconhecer as relações entre a, b, c e α, β, γ. No cúbico, os três eixos têm o mesmo comprimento e são perpendiculares; no tetragonal, dois são iguais; no ortorrômbico, os três são diferentes, mas os ângulos continuam sendo 90°. Por isso, a sequência indicada no gabarito é D."
   },
   {
     id: 4,
@@ -55,7 +59,7 @@ const BANCO_DE_PERGUNTAS = [
       "Luz que gira em forma circular ao se propagar."
     ],
     respostaCorreta: 1,
-    justificativa: "A luz comum é não polarizada, pois suas vibrações ocorrem em diversos planos perpendiculares à direção de propagação. Na luz linearmente polarizada, essas vibrações ficam restritas a um único plano."
+    justificativa: "A luz comum é não polarizada, pois suas vibrações ocorrem em diversos planos perpendiculares à direção de propagação. Na luz linearmente polarizada, essas vibrações ficam restritas a um único plano. Por isso, B."
   },
   {
     id: 5,
@@ -63,7 +67,8 @@ const BANCO_DE_PERGUNTAS = [
     imagem: imgQuestao5,
     opcoes: ["4,89 Å", "3,030 Å", "4,78 Å", "20,5 Å"],
     respostaCorreta: 0,
-    justificativa: "Pela Lei de Bragg (nλ = 2d sin θ), onde n = 2, λ = 1,5406 Å e θ = 18,75°: d = (nλ) / (2 sin θ) = (2 * 1,5406) / (2 * sin 18,75°) = 3,0812 / (2 * 0,315) = 3,0812 / 0,630 ≈ 4,89 Å."
+    justificativa: "Cálculo:",
+    justificativaImagem: imgJustificativa5
   },
   {
     id: 6,
@@ -71,7 +76,7 @@ const BANCO_DE_PERGUNTAS = [
     imagem: imgQuestao6,
     opcoes: ["Triclínico", "Tetragonal", "Monoclínico", "Cúbico"],
     respostaCorreta: 2,
-    justificativa: "O sistema monoclínico apresenta a ≠ b ≠ c com dois ângulos iguais a 90° e um diferente de 90° (α = γ = 90°, β ≠ 90°). A representação geométrica mostrada corresponde a essa configuração."
+    justificativa: "O sistema monoclínico apresenta a ≠ b ≠ c com dois ângulos iguais a 90° e um diferente de 90° (α = γ = 90°, β ≠ 90°). Portanto, ao observar a representação geométrica da questão, a configuração corresponde ao sistema monoclínico. O gabarito indica C."
   },
   {
     id: 7,
@@ -79,7 +84,8 @@ const BANCO_DE_PERGUNTAS = [
     imagem: imgQuestao7,
     opcoes: ["279,14 Å³", "450,7 Å³", "150,6 Å³", "500,3 Å³"],
     respostaCorreta: 0,
-    justificativa: "Cálculo do volume da cela hexagonal: V = (√3 / 2) * a² * c. Para a = 4,91 Å e c = 13,37 Å, temos: a² = 24,1081; 24,1081 * 13,37 = 322,73. Aplicando (√3 / 2) ≈ 0,866, resulta em: V = 0,866 * 322,73 = 279,14 Å³."
+    justificativa: "Cálculo:",
+    justificativaImagem: imgJustificativa7
   },
   {
     id: 8,
@@ -91,7 +97,7 @@ const BANCO_DE_PERGUNTAS = [
       "Não pode ser determinada sem parâmetro de rede"
     ],
     respostaCorreta: 2,
-    justificativa: "O fator de empacotamento 0,74 e o número de coordenação 12 são características de estruturas de empacotamento máximo. Tanto a cúbica de face centrada (CFC) quanto a hexagonal compacta (HC) possuem essas propriedades."
+    justificativa: "O fator de empacotamento 0,74 e o número de coordenação 12 são características de estruturas compactas. Tanto a cúbica de face centrada (CFC) quanto a hexagonal compacta (HC) possuem essas características."
   },
   {
     id: 9,
@@ -103,7 +109,7 @@ const BANCO_DE_PERGUNTAS = [
       "Não há reflexão nesse caso."
     ],
     respostaCorreta: 2,
-    justificativa: "No ângulo de Brewster, a luz refletida torna-se totalmente polarizada perpendicularmente ao plano de incidência, pois a componente paralela deixa de ser refletida."
+    justificativa: "No ângulo de Brewster, a luz refletida fica completamente polarizada perpendicularmente ao plano de incidência. A relação é dada por: tan θ_B = n₂ / n₁. Como o enunciado informa que n₁ > n₂, o ângulo continua sendo fisicamente possível; o ponto principal é que a componente paralela ao plano de incidência deixa de aparecer no feixe refletido. Assim, a alternativa C é a correta."
   },
   {
     id: 10,
@@ -116,7 +122,7 @@ const BANCO_DE_PERGUNTAS = [
       "A) extraordinário, B) extraordinário, C) extraordinário e extraordinário, D) extraordinário e ordinário"
     ],
     respostaCorreta: 2,
-    justificativa: "Devido à anisotropia óptica em cristais tetragonais, os raios ordinário e extraordinário comportam-se de forma distinta perante a propagação em relação ao eixo óptico nas construções de Huygens."
+    justificativa: "Em um cristal tetragonal, a anisotropia óptica faz com que os raios ordinário e extraordinário tenham comportamentos diferentes dependendo da direção de propagação em relação ao eixo óptico. A alternativa C é a que corresponde às classificações dos raios nas quatro construções mostradas na figura."
   },
 
   // --- MINERALOGIA E GEMOLOGIA (YGOR) ---
@@ -130,7 +136,7 @@ const BANCO_DE_PERGUNTAS = [
       "Quatro eixos cristalográficos, sendo três horizontais com ângulos de 120º entre si."
     ],
     respostaCorreta: 2,
-    justificativa: "O sistema cúbico possui três eixos cristalográficos de comprimentos iguais (a = b = c) que se cruzam perpendicularmente em ângulos de 90° (α = β = γ = 90°)."
+    justificativa: "A resposta é 'C' pois é essa configuração que forma um sistema cristalino isométrico/cúbico (a = b = c / α = β = γ = 90 graus)."
   },
   {
     id: 12,
@@ -142,7 +148,7 @@ const BANCO_DE_PERGUNTAS = [
       "A tenacidade é medida pela escala de Mohs e a dureza define o grau de coesão atômica; a gipsita é classificada como mineral coeso e o quartzo como quebradiço."
     ],
     respostaCorreta: 1,
-    justificativa: "Dureza é a resistência ao risco superficial e tenacidade é a resistência à deformação ou rompimento. Quartzo e calcita são tipicamente quebradiços, enquanto metais nativos (como cobre e prata) possuem tenacidade coesa."
+    justificativa: "A resposta é 'B' pois dita perfeitamente a descrição de 'Dureza' e 'Tenacidade' para a mineralogia, além de que os minerais Quartzo e Calcita SÃO minerais quebradiços e o cobre nativo e a prata nativa apresentam tenacidade coesa."
   },
   {
     id: 13,
@@ -154,21 +160,21 @@ const BANCO_DE_PERGUNTAS = [
       "Define-se como alocromático o mineral que emite luz visível ao ser aquecido; o quartzo manifesta essa cor apenas quando submetido a altas temperaturas."
     ],
     respostaCorreta: 2,
-    justificativa: "Minerais alocromáticos seriam incolores quando puros, porém apresentam colorações diversas quando há impurezas ou defeitos estruturais, gerando variedades como citrino, ametista e quartzo fumê."
+    justificativa: "A resposta é 'C' pois define perfeitamente o conceito de um mineral 'alocromático'. São minerais que são incolores quando puros, ou seja, sem nenhuma interferência ou impureza dentro deles e, quando possuir alguma impureza, esses minerais ganharão tonalidades diferentes de cor, formando uma variedade."
   },
   {
     id: 14,
     pergunta: "Como são denominados os minerais que possuem a mesma composição química, mas apresentam estruturas cristalinas diferentes (arranjos atômicos distintos)?",
     opcoes: ["Isomorfos", "Polimorfos", "Pseudomorfos", "Amorfos"],
     respostaCorreta: 1,
-    justificativa: "Minerais polimorfos possuem exatamente a mesma composição química, porém arranjos cristalinos distintos devido às condições de pressão e temperatura no momento da formação (ex: diamante e grafite)."
+    justificativa: "A resposta é 'B' pois minerais 'Polimorfos' é exatamente isso: Possuem a mesma composição química, mas estrutura cristalina totalmente diferentes. Isso ocorre pelo fato de como esses minerais se formam, pois, dependendo da quantidade de pressão e temperatura que haver no ambiente de formação, pode resultar em propriedades físicas diferente; Um exemplo claro disso é o Diamante e o Grafite, onde são totalmente formados por Carbono, porém apresentam estruturas cristalinas diferentes."
   },
   {
     id: 15,
     pergunta: "Quais das gemas a seguir NÃO pode ser considerada uma gema no sentido amplo?",
     opcoes: ["Ametista", "Pérola", "Diamante", "YAG", "Todas as alternativas estão incorretas"],
     respostaCorreta: 4,
-    justificativa: "No sentido amplo, qualquer material natural, orgânico, inorgânico ou sintético de valor estético para adorno pessoal é considerado gema. Portanto, todas as opções listadas enquadram-se na definição."
+    justificativa: "A resposta é 'E' pois, resumidamente, uma gema é qualquer material, de origem orgânica ou inorgânica, natural ou sintética que, por conta de sua beleza, pode ser usado para adorno pessoal. Todos as gemas à seguir podem sim serem considerados gemas no sentido amplo."
   },
 
   // --- ROCHAS E MINERAIS GERAIS (ANA) ---
@@ -183,7 +189,7 @@ const BANCO_DE_PERGUNTAS = [
       "Sim, rochas são materiais produzidos pelo homem."
     ],
     respostaCorreta: 1,
-    justificativa: "Rochas são consolidações formadas por agregados naturais de um ou mais minerais, originadas através de processos geológicos naturais."
+    justificativa: "É a resposta b, pois rochas são agregados naturais de um ou mais minerais, formados por processos geológicos naturais."
   },
   {
     id: 17,
@@ -196,14 +202,14 @@ const BANCO_DE_PERGUNTAS = [
       "Rochas são líquidas e minerais são sólidos."
     ],
     respostaCorreta: 2,
-    justificativa: "Minerais possuem estrutura cristalina e composição química definida; já as rochas são corpos formados pelo agrupamento desses minerais."
+    justificativa: "É a resposta c, pois minerais possuem composição química e estrutura cristalina características; rochas são agregados de um ou mais minerais."
   },
   {
     id: 18,
     pergunta: "Qual mineral se apresenta em estado líquido em temperatura ambiente?",
     opcoes: ["Quartzo", "Calcita", "Mercúrio nativo", "Halita", "Diamante"],
     respostaCorreta: 2,
-    justificativa: "O mercúrio nativo constitui uma das poucas exceções minerais encontradas naturalmente no estado líquido sob temperatura e pressão ambientes."
+    justificativa: "C, pois o mercúrio nativo é um mineral que permanece líquido em condições de temperatura ambiente."
   },
   {
     id: 19,
@@ -216,7 +222,7 @@ const BANCO_DE_PERGUNTAS = [
       "Um mineral orgânico."
     ],
     respostaCorreta: 1,
-    justificativa: "A halita é o mineral evaporítico de fórmula química NaCl, popularmente conhecido e utilizado como sal de cozinha."
+    justificativa: "Halita é o mineral de composição NaCl, conhecido como o principal componente mineral do sal de cozinha."
   },
   {
     id: 20,
@@ -229,7 +235,7 @@ const BANCO_DE_PERGUNTAS = [
       "Talco e mica."
     ],
     respostaCorreta: 2,
-    justificativa: "Hematita e magnetita constituem óxidos de ferro, figurando como importantes minerais de minério metálicos."
+    justificativa: "Hematita e magnetita são minerais metálicos, importantes fontes naturais de ferro."
   },
   {
     id: 21,
@@ -242,7 +248,7 @@ const BANCO_DE_PERGUNTAS = [
       "Apenas quando lapidado"
     ],
     respostaCorreta: 0,
-    justificativa: "Verdadeiro. O diamante é uma forma alotrópica de carbono puro e classifica-se tecnicamente como um mineral não metálico."
+    justificativa: "Verdadeiro. O diamante é um mineral não metálico constituído por carbono cristalizado."
   },
   {
     id: 22,
@@ -255,7 +261,7 @@ const BANCO_DE_PERGUNTAS = [
       "Local de extração apenas."
     ],
     respostaCorreta: 0,
-    justificativa: "A identificação mineralógica padrão utiliza propriedades físicas essenciais tais como cor, brilho, traço, dureza, densidade e padrão de clivagem."
+    justificativa: "Cor, dureza, brilho, clivagem e densidade são propriedades utilizadas para identificar e diferenciar minerais."
   },
   {
     id: 23,
@@ -268,7 +274,7 @@ const BANCO_DE_PERGUNTAS = [
       "Ácidos e básicos."
     ],
     respostaCorreta: 0,
-    justificativa: "Conforme a composição e aplicação econômica, os minerais são divididos em metálicos e não metálicos (as demais alternativas se referem a classificações de rochas)."
+    justificativa: "Os minerais podem ser classificados, entre outras formas, em metálicos e não metálicos, conforme suas características e usos."
   },
   {
     id: 24,
@@ -281,7 +287,7 @@ const BANCO_DE_PERGUNTAS = [
       "Radioativa."
     ],
     respostaCorreta: 1,
-    justificativa: "Por definição clássica, minerais são compostos naturais de formação essencialmente inorgânica, salvo raras exceções biogênicas."
+    justificativa: "Minerais podem ter origem inorgânica e, em alguns casos específicos, origem relacionada a processos orgânicos."
   },
   {
     id: 25,
@@ -294,7 +300,7 @@ const BANCO_DE_PERGUNTAS = [
       "Pela ação exclusiva do vento."
     ],
     respostaCorreta: 2,
-    justificativa: "Rochas metamórficas surgem do rearranjo mineralógico e estrutural de rochas pré-existentes quando submetidas a condições elevadas de pressão e temperatura no interior da crosta terrestre."
+    justificativa: "Rochas metamórficas resultam da transformação de rochas preexistentes devido principalmente à pressão e temperatura, sem fusão completa."
   },
 
   // --- GEMOLOGIA E ÓPTICA (MATHEUS) ---
@@ -303,14 +309,14 @@ const BANCO_DE_PERGUNTAS = [
     pergunta: "Durante uma expedição, um pesquisador encontra um cristal verde translúcido associado a pegmatitos graníticos ricos em berílio. Qual gema rara provavelmente está sendo observada?",
     opcoes: ["Jadeíta", "Malaquita", "Esmeralda", "Peridoto"],
     respostaCorreta: 2,
-    justificativa: "A esmeralda é a variedade verde do mineral berilo (Be₃Al₂Si₆O₁₈). Sua formação ocorre pela combinação de ambientes pegmatíticos ricos em berílio com presença de elementos cromo ou vanádio."
+    justificativa: "A esmeralda é uma variedade verde do mineral berilo, cuja fórmula química é Be₃Al₂Si₆O₁₈. Sua cor verde intensa ocorre principalmente pela presença de pequenas quantidades de cromo e/ou vanádio. Ambientes ricos em berílio, como pegmatitos graníticos, podem favorecer a formação de minerais do grupo do berilo. Porém, a esmeralda normalmente exige uma combinação rara: berílio junto com elementos cromóforos como cromo ou vanádio. Por isso, ela é considerada uma gema rara e de alto valor gemológico."
   },
   {
     id: 27,
     pergunta: "Certos diamantes naturais possuem coloração azul devido à presença de qual elemento químico em sua estrutura cristalina?",
     opcoes: ["Ferro", "Cromo", "Boro", "Titânio"],
     respostaCorreta: 2,
-    justificativa: "Nos diamantes azuis, átomos de boro substituem o carbono na rede cristalina, alterando a absorção de luz e conferindo a coloração azulada."
+    justificativa: "Boro. Diamantes são formados basicamente por carbono, mas pequenas impurezas podem alterar sua cor. No caso dos diamantes azuis, o elemento mais associado à coloração é o boro, que substitui alguns átomos de carbono na estrutura cristalina. Essa substituição muda a forma como o diamante absorve a luz, fazendo com que ele apresente tonalidades azuladas. Quanto mais intensa e uniforme for a cor azul, mais raro e valioso tende a ser o diamante."
   },
   {
     id: 28,
@@ -322,14 +328,14 @@ const BANCO_DE_PERGUNTAS = [
       "À presença de água aprisionada"
     ],
     respostaCorreta: 1,
-    justificativa: "O efeito chatoyance ocorre pela reflexão da luz em inclusões ou estruturas fibrosas paralelas dentro do cristal, criando a faixa luminosa característica."
+    justificativa: "Presença de inclusões fibrosas alinhadas. O fenômeno chamado chatoyance, ou \"efeito olho-de-gato\", acontece quando a luz reflete em estruturas fibrosas ou inclusões orientadas dentro da gema. No olho-de-tigre, esse efeito cria uma faixa luminosa móvel que lembra o brilho do olho de um felino. Esse fenômeno só aparece bem quando a pedra é lapidada em formato cabochão, pois a superfície arredondada ajuda a concentrar a luz em uma linha brilhante. É um ótimo exemplo de como a beleza de uma gema depende tanto da composição quanto da estrutura interna."
   },
   {
     id: 29,
     pergunta: "Um cristal reage fortemente ao ácido clorídrico diluído e apresenta clivagem romboédrica perfeita. Qual mineral provavelmente está sendo analisado?",
     opcoes: ["Quartzo", "Feldspato", "Pirita", "Calcita"],
     respostaCorreta: 3,
-    justificativa: "A efervescência ao ácido clorídrico diluído (devido à liberação de CO₂) aliada à clivagem romboédrica perfeita são propriedades diagnósticas do mineral calcita (CaCO₃)."
+    justificativa: "Calcita. A calcita é um carbonato de cálcio, com fórmula química CaCO₃. Uma de suas principais características diagnósticas é reagir com ácido clorídrico diluído, liberando bolhas de gás carbônico. Esse processo é chamado de efervescência. Além disso, a calcita possui clivagem romboédrica perfeita, ou seja, tende a se quebrar em formas inclinadas características. Por isso, a combinação \"reage ao ácido + clivagem romboédrica\" é uma pista clássica para identificar calcita em laboratório."
   },
   {
     id: 30,
@@ -341,7 +347,7 @@ const BANCO_DE_PERGUNTAS = [
       "À oxidação superficial do mineral"
     ],
     respostaCorreta: 0,
-    justificativa: "A alexandrita (variedade de crisoberilo) muda de cor sob diferentes fontes de iluminação devido à absorção seletiva de comprimentos de onda da luz provocada pelo elemento cromo em sua estrutura."
+    justificativa: "Absorção seletiva da luz por cromo. A alexandrita é uma variedade rara do mineral crisoberilo, famosa por mudar de cor conforme a fonte de luz. Em luz natural ou fluorescente, costuma aparecer verde a verde-azulada; em luz incandescente, pode parecer vermelha, púrpura ou arroxeada. Esse efeito ocorre devido à presença de cromo, que absorve certos comprimentos de onda da luz de maneira seletiva. Por isso, a alexandrita é conhecida pela frase clássica: \"esmeralda de dia, rubi à noite\"."
   }
 ];
 
@@ -413,14 +419,14 @@ export function Jogar() {
               </span>
               <h2>{perguntaAtual.pergunta}</h2>
 
-              {/* Renderização de Imagem Única */}
+              {/* Renderização de Imagem Única da Pergunta */}
               {perguntaAtual.imagem && (
                 <div className="imagem-container">
                   <img src={perguntaAtual.imagem} alt="Ilustração da pergunta" className="pergunta-imagem" />
                 </div>
               )}
 
-              {/* Renderização de Múltiplas Imagens */}
+              {/* Renderização de Múltiplas Imagens da Pergunta */}
               {perguntaAtual.imagens && (
                 <div className="imagem-container-duplo">
                   {perguntaAtual.imagens.map((imgSrc, idx) => (
@@ -456,10 +462,9 @@ export function Jogar() {
                 })}
               </div>
 
-              {/* Caixas de feedback separadas */}
+              {/* Caixas de feedback */}
               {respondido && (
                 <>
-                  {/* Caixa informando se errou ou acertou */}
                   <div
                     className={`feedback-box ${
                       opcaoSelecionada === perguntaAtual.respostaCorreta
@@ -479,11 +484,38 @@ export function Jogar() {
                     )}
                   </div>
 
-                  {/* Caixa da justificativa renderizada embaixo */}
+                  {/* Caixa da justificativa: Texto PRIMEIRO, depois a imagem */}
                   {perguntaAtual.justificativa && (
                     <div className="justificativa-box">
                       <strong><u>Explicação:</u></strong>
+                      
+                      {/* Texto da Justificativa */}
                       <p>{perguntaAtual.justificativa}</p>
+
+                      {/* Imagem da Justificativa (Renderizada logo abaixo do texto) */}
+                      {perguntaAtual.justificativaImagem && (
+                        <div className="imagem-container">
+                          <img 
+                            src={perguntaAtual.justificativaImagem} 
+                            alt="Ilustração da justificativa" 
+                            className="pergunta-imagem" 
+                          />
+                        </div>
+                      )}
+
+                      {/* Múltiplas Imagens da Justificativa (se houver) */}
+                      {perguntaAtual.justificativaImagens && (
+                        <div className="imagem-container-duplo">
+                          {perguntaAtual.justificativaImagens.map((imgSrc, idx) => (
+                            <img 
+                              key={idx} 
+                              src={imgSrc} 
+                              alt={`Ilustração da justificativa ${idx + 1}`} 
+                              className="pergunta-imagem" 
+                            />
+                          ))}
+                        </div>
+                      )}
                     </div>
                   )}
                 </>
