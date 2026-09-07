@@ -50,7 +50,7 @@ export function SobreNos() {
                 2026/1)
               </li>
               <li>
-                <strong>Cayo Gonçalves Garcia</strong> — Análista e Desenvolvedor de Sistemas
+                <strong>Cayo Gonçalves Garcia</strong> — Analista e Desenvolvedor de Sistemas
               </li>
             </ul>
           </div>
