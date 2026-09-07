@@ -163,6 +163,30 @@
   border: 1px solid #ef9a9a;
 }
 
+/* Caixa de Justificativa */
+.justificativa-box {
+  padding: 14px 16px;
+  border-radius: 8px;
+  background-color: #f7f4fd;
+  border: 1px solid #e2d8f7;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.justificativa-box strong {
+  display: block;
+  font-size: 14px;
+  color: #3f186c;
+  margin-bottom: 6px;
+}
+
+.justificativa-box p {
+  color: #333333;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
 /* Botões com efeito Uiverse */
 .botao-padrao {
   display: inline-block;
