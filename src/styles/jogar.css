@@ -83,6 +83,7 @@
   flex-wrap: wrap;
 }
 
+/* Imagem da Pergunta (Inalterada) */
 .pergunta-imagem {
   max-width: 100%;
   max-height: 220px;
@@ -96,6 +97,22 @@
 .imagem-container-duplo .pergunta-imagem {
   max-width: 48%;
   max-height: 200px;
+}
+
+/* Imagem da Justificativa (Aumentada exclusivamente) */
+.justificativa-imagem {
+  max-width: 100%;
+  max-height: 380px; /* Tamanho aumentado somente para a justificativa */
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.imagem-container-duplo .justificativa-imagem {
+  max-width: 48%;
+  max-height: 420px;
 }
 
 .opcoes-lista {
@@ -165,7 +182,7 @@
 
 /* Caixa de Justificativa */
 .justificativa-box {
-  padding: 14px 16px;
+  padding: 16px;
   border-radius: 8px;
   background-color: #f7f4fd;
   border: 1px solid #e2d8f7;
@@ -177,14 +194,29 @@
   display: block;
   font-size: 14px;
   color: #3f186c;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .justificativa-box p {
   color: #333333;
   font-size: 14px;
   line-height: 1.5;
-  margin: 0;
+  margin-bottom: 12px;
+}
+
+.justificativa-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* Ajuste do container de imagem dentro da caixa de justificativa */
+.justificativa-box .imagem-container,
+.justificativa-box .imagem-container-duplo {
+  margin: 12px 0 0 0;
+}
+
+/* Fallback caso a imagem da justificativa também use a classe .pergunta-imagem */
+.justificativa-box .pergunta-imagem {
+  max-height: 500px;
 }
 
 /* Botões com efeito Uiverse */
@@ -248,5 +280,13 @@
 
   .imagem-container-duplo .pergunta-imagem {
     max-width: 100%;
+  }
+
+  .justificativa-imagem {
+    max-height: 260px;
+  }
+
+  .justificativa-box .pergunta-imagem {
+    max-height: 260px;
   }
 }
