@@ -1,181 +1,153 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html,
-body {
-    min-height: 100vh;
-}
-
-body {
-    background: linear-gradient(
-        135deg,
-        #d0b8ff 0%,
-        #b089ff 45%,
-        #9a6cff 75%,
-        #8757f5 100%
-    );
-
-    font-family: "Outfit", sans-serif;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.login-container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    #d0b8ff 0%,
+    #b089ff 45%,
+    #9a6cff 75%,
+    #8757f5 100%
+  );
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Conteúdo principal */
-main {
-    flex: 1;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
+.login-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
 }
 
 /* Caixa de texto */
-.caixa-de-texto {
-    width: 90%;
-    max-width: 1100px;
-
-    margin: 40px auto;
-    padding: 40px;
-
-    background: white;
-    border-radius: 20px;
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
-
-    transition: transform 0.3s ease;
+.login-container .caixa-de-texto {
+  width: 90%;
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease;
+  text-align: center;
 }
 
-.caixa-de-texto:hover {
-    transform: translateY(-3px);
+.login-container .caixa-de-texto:hover {
+  transform: translateY(-3px);
 }
 
-.caixa-de-texto h1 {
-    text-align: center;
-    margin-bottom: 20px;
-
-    color: #5b2c83;
-
-    font-size: 35px;
-    font-weight: 700;
+.login-container .caixa-de-texto h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #5b2c83;
+  font-size: 35px;
+  font-weight: 800;
 }
 
-.caixa-de-texto h2 {
-    text-align: center;
-    margin-bottom: 20px;
-
-    color: #5b2c83;
-
-    font-size: 25px;
-    font-weight: 600;
+.login-container .caixa-de-texto h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #5b2c83;
+  font-size: 24px;
+  font-weight: 600;
 }
 
-.caixa-de-texto p {
-    line-height: 1.6;
-
-    text-align: center;
-
-    font-size: 17px;
-    font-weight: 400;
+.login-container .caixa-de-texto p {
+  line-height: 1.6;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333333;
 }
 
-/* Botão */
-a {
-    margin-bottom: 30px;
-
-    text-decoration: none;
+.login-container .caixa-de-texto .instagram-handle {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #7014ad;
 }
 
-button {
-    display: inline-block;
-
-    padding: 12px 24px;
-
-    border: 1px solid #4f4f4f;
-    border-radius: 4px;
-
-    position: relative;
-    overflow: hidden;
-
-    background: white;
-
-    font-family: "Outfit", sans-serif;
-    font-size: 17px;
-    font-weight: 400;
-
-    color: black;
-
-    cursor: pointer;
-
-    transition: all 0.2s ease-in;
-    z-index: 1;
+/* Footer e Botão */
+.login-footer {
+  width: 100%;
+  padding: 25px;
+  text-align: center;
 }
 
-button::before {
-    content: "";
-
-    position: absolute;
-    left: 50%;
-    top: 100%;
-
-    width: 140%;
-    height: 180%;
-
-    transform: translateX(-50%) scaleY(1) scaleX(1.25);
-
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 50%;
-
-    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-
-    z-index: -1;
+.login-footer a {
+  text-decoration: none;
 }
 
-button::after {
-    content: "";
-
-    position: absolute;
-    left: 55%;
-    top: 180%;
-
-    width: 160%;
-    height: 190%;
-
-    transform: translateX(-50%) scaleY(1) scaleX(1.45);
-
-    background-color: #7014ad;
-    border-radius: 50%;
-
-    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-
-    z-index: -1;
+.botao-voltar {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 1px solid #4f4f4f;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  z-index: 1;
 }
 
-button:hover {
-    color: white;
-    border-color: #7014ad;
+.botao-voltar::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
 }
 
-button:hover::before {
-    top: -35%;
-
-    background-color: #7014ad;
-
-    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+.botao-voltar::after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  background-color: #7014ad;
+  border-radius: 50%;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
 }
 
-button:hover::after {
-    top: -45%;
+.botao-voltar:hover {
+  color: #ffffff;
+  border-color: #7014ad;
+}
 
-    background-color: #7014ad;
+.botao-voltar:hover::before {
+  top: -35%;
+  background-color: #7014ad;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
 
-    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+.botao-voltar:hover::after {
+  top: -45%;
+  background-color: #7014ad;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }

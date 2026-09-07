@@ -50,8 +50,7 @@ export function SobreNos() {
                 2026/1)
               </li>
               <li>
-                <strong>Cayo Gonçalves Garcia</strong> — Formado em Análise e
-                Desenvolvimento de Sistemas na Unicesumar (desde 2025/3)
+                <strong>Cayo Gonçalves Garcia</strong> — Análista e Desenvolvedor de Sistemas
               </li>
             </ul>
           </div>
