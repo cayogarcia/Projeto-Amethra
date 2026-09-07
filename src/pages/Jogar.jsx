@@ -482,7 +482,7 @@ export function Jogar() {
                   {/* Caixa da justificativa renderizada embaixo */}
                   {perguntaAtual.justificativa && (
                     <div className="justificativa-box">
-                      <strong>EXPLICAÇÃO:</strong>
+                      <strong><u>Explicação:</u></strong>
                       <p>{perguntaAtual.justificativa}</p>
                     </div>
                   )}
