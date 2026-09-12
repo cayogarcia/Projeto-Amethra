@@ -408,6 +408,21 @@ export function Jogar() {
                 Você acertou <strong>{pontuacao}</strong> de{' '}
                 <strong>{BANCO_DE_PERGUNTAS.length}</strong> perguntas.
               </p>
+              <p><strong>Por favor, preencha nosso formulário de feedback:</strong></p>
+              
+              {/* Botão para o Google Forms */}
+              <a
+                href="https://forms.gle/EjEWGUVr5GYMDeUD9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="botao-padrao"
+                style={{ textDecoration: 'none', display: 'inline-block', marginBottom: '15px' }}
+              >
+                FEEDBACK DO QUIZ
+              </a>
+
+              <br />
+
               <button className="botao-padrao" onClick={iniciarJogo}>
                 JOGAR NOVAMENTE
               </button>
