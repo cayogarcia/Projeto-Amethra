@@ -9,8 +9,8 @@ import imgQuestao7 from '../assets/Questao7.png';
 import imgQuestao10A from '../assets/Questao10a.png';
 import imgQuestao10B from '../assets/Questao10b.png';
 import imgJustificativa2 from '../assets/Justificativa2.jpeg';
-import imgJustificativa5 from '../assets/Justificativa5.jpeg';
-import imgJustificativa7 from '../assets/Justificativa7.jpeg';
+import imgJustificativa5 from '../assets/Justificativa5.png';
+import imgJustificativa7 from '../assets/Justificativa7.png';
 
 // Banco de dados com imagens associadas e justificativas
 const BANCO_DE_PERGUNTAS = [
@@ -410,7 +410,6 @@ export function Jogar() {
               </p>
               <p><strong>Por favor, preencha nosso formulário de feedback:</strong></p>
               
-              {/* Botão para o Google Forms */}
               <a
                 href="https://forms.gle/EjEWGUVr5GYMDeUD9"
                 target="_blank"
