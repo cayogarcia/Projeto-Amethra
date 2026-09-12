@@ -216,7 +216,7 @@
 
 /* Fallback caso a imagem da justificativa também use a classe .pergunta-imagem */
 .justificativa-box .pergunta-imagem {
-  max-height: 500px;
+  max-height: 700px;
 }
 
 /* Botões com efeito Uiverse */
