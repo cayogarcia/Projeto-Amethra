@@ -50,8 +50,12 @@ export function SobreNos() {
                 2026/1)
               </li>
               <li>
-                <strong>Cayo Gonçalves Garcia</strong> — Analista e Desenvolvedor de Sistemas
+                <strong>Eduardo Vizentim Herculano</strong> — Aluno de Gemologia na
+                UFES (desde 2024/1)
               </li>
+              <li>
+                <strong>Cayo Gonçalves Garcia</strong> — Analista e Desenvolvedor de Sistemas
+              </li> 
             </ul>
           </div>
         </div>
