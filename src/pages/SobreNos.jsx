@@ -54,6 +54,10 @@ export function SobreNos() {
                 UFES (desde 2024/1)
               </li>
               <li>
+                <strong>Mateus Cordeiro de Lima</strong> — Aluno de Gemologia na
+                UFES (desde 2021/2)
+              </li>
+              <li>
                 <strong>Cayo Gonçalves Garcia</strong> — Analista e Desenvolvedor de Sistemas
               </li> 
             </ul>
