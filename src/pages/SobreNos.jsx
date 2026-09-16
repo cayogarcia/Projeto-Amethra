@@ -50,8 +50,8 @@ export function SobreNos() {
                 2026/1)
               </li>
               <li>
-                <strong>Eduardo Vizentim Herculano</strong> — Aluno de Gemologia na
-                UFES (desde 2024/1)
+                <strong>Eduardo Vizentim Herculano</strong> — Aluno de Geologia na
+                UNESP (desde 2024/1)
               </li>
               <li>
                 <strong>Mateus Cordeiro de Lima</strong> — Aluno de Gemologia na
