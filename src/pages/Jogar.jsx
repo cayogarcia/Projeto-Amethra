@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/jogar.css';
 import imgQuestao1 from '../assets/Questao1.png';
@@ -389,6 +389,26 @@ export function Jogar() {
     }
   };
 
+  // Ao clicar em "SAIR", leva direto para a tela final (com o link de feedback),
+  // sem precisar responder as perguntas restantes.
+  const handleSair = () => {
+    setFimDoJogo(true);
+  };
+
+  // Avisa o usuário (com o alerta padrão do navegador) caso ele tente fechar
+  // a aba/navegador durante o quiz, antes de chegar na tela de feedback.
+  useEffect(() => {
+    const handleBeforeUnload = (e) => {
+      if (jogoIniciado && !fimDoJogo) {
+        e.preventDefault();
+        e.returnValue = '';
+      }
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, [jogoIniciado, fimDoJogo]);
+
   return (
     <div className="jogar-container">
       <main className="jogar-main">
@@ -554,6 +574,13 @@ export function Jogar() {
                       : 'VER RESULTADO'}
                   </button>
                 )}
+
+                <button
+                  className="botao-padrao"
+                  onClick={handleSair}
+                >
+                  SAIR
+                </button>
               </div>
             </div>
           )}
